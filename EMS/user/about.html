@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+           body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header */
+        .navbar {
+            background-color: #435739;
+            padding: 1rem;
+        }
+
+        .navbar-brand {
+            font-family: 'Georgia', serif;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .about-section {
+            position: relative;
+            background: url('/EVENT IMG/abt.jpg') no-repeat center center/cover;
+            height: 100vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .overlay h2 {
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-size: 36px;
+        }
+        .overlay p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">EVENTO</a>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            <li class="nav-item">
+                <div class="user-icon" onclick="toggleUserMenu()">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="sub-menu-wrap" id="userMenu">
+                    <div class="sub-menu">
+                        <div class="user-info">
+                            <i class="fa-solid fa-user"></i>
+                            <h4>James</h4>
+                        </div>
+                        <hr>
+    
+                        <a href="#" class="sub-menu-link">
+                            <i class="fa-solid fa-user"></i>
+                            <p>Edit Profile</p>
+                            <span>></span>
+                        </a>
+                        <a href="order.html" class="sub-menu-link">
+                            <i class="fa fa-book"></i>
+                            <p>Booking details</p>
+                            <span>></span>
+                        </a>
+                        <a href="#" class="sub-menu-link">
+                            <i class=" fa fa-sign-out"></i>
+                            <p>Logout</p>
+                            <span>></span>
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+<!-- About Us Section -->
+<section class="about-section">
+    <div class="overlay">
+        <h2>ABOUT US</h2>
+        <p>"Welcome to Evento, your premier wedding event management destination!"</p>
+        <p>We are a team of passionate and experienced wedding professionals dedicated to making your special day truly unforgettable. With years of expertise in wedding planning, coordination, and design, we understand the importance of attention to detail and personalized service.</p>
+        <p>Our mission is to provide couples with a seamless and stress-free wedding planning experience, allowing you to focus on what matters most - your love and commitment to each other.</p>
+        <p>Let's get started on this exciting journey together! Contact us today to schedule a consultation and let the magic begin!</p>
+    </div>
+</section>
+ <!-- Scripts -->
+ <script>
+    // Function to toggle the display of the user info dropdown
+    function toggleUserMenu() {
+        const userMenu = document.getElementById("userMenu");
+        userMenu.classList.toggle("active");
+    }
+
+    // Close the user menu if clicked outside
+    document.addEventListener("click", function(event) {
+        const userMenu = document.getElementById("userMenu");
+        const userIcon = document.querySelector(".user-icon");
+        if (!userIcon.contains(event.target) && !userMenu.contains(event.target)) {
+            userMenu.classList.remove("active");
+        }
+    });
+</script>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

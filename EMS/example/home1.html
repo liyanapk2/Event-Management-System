@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            color: #555;
+        }
+
+          /* Custom styles for the calligraphy text */
+          .calligraphy-text {
+            font-family: 'Great Vibes', cursive;
+            font-size: 100px;
+            text-align: center;
+            margin-top: 20%;
+        }
+
+        /* Header and Navbar */
+        .navbar {
+            background-color: #d3d3c0;
+        }
+        .navbar-brand {
+            font-family: 'Times New Roman', serif;
+            font-size: 2rem;
+            color: black;
+        }
+        .navbar-nav .nav-link {
+            color: black;
+        }
+        .main{
+            font-family: 'Lora', serif; /* Alternative fonts: 'Playfair Display', 'Cormorant' */
+            font-size: 4rem;
+            font-weight: 300;
+            color: #333333;
+            letter-spacing: 1px;
+
+        }
+        .slogan-text {
+            font-family: 'UnifrakturMaguntia', cursive; /* Gothic/Fraktur style font */
+            font-size: 3rem;
+            color: #f9f7f7;
+            text-align: center;
+        }
+
+        /* Hero Section */
+        .hero-image {
+            background-image: url('/EVENT IMG/home1.jpg'); /* Replace with the actual image path */
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .hero-overlay{
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        /* .hero img {
+            width: 100%;
+            height: 50%;
+        } */
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2rem;
+            font-family: 'Courier New', monospace;
+        }
+
+        /* Message Section */
+        .message {
+            text-align: center;
+            margin: 30px 0;
+            font-style: italic;
+            font-size: 1.5rem;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Footer Section */
+        .footer {
+            background-image: url('/EVENT IMG/last.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            /* opacity: 0.5; */
+            text-align: center;
+            padding: 140px;
+            /* background-color: #f0f0f0; */
+            font-size: 1.5rem;
+            /* color: black; */
+        } 
+      
+       
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <h1 class="main">EVENTO</h1>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Our Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-image">
+        <!-- <img src="/EVENT IMG/home1.jpg" alt="Wedding Image"> -->
+         <div class="hero-overlay"></div>
+        <div class="hero-text">
+           <div class="calligraphy-text">Evento</div><br>  <div class="slogan-text">YOUR WEDDING,<br>YOUR WAY!</div>
+
+
+        </div>
+    </div>
+
+    <!-- Message Section -->
+    <div class="message">
+        <p><i>Hand in hand and side by side, <br>
+        we run through life together, <br>
+        sharing moments and making memories <br>
+        that will live on forever...</i></p>
+    </div>
+
+    <!-- Gallery Section -->
+    <div class="container gallery">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="/EVENT IMG/pic1.jpg" alt="Gallery Image 1">
+            </div>
+            <div class="col-md-4">
+                <img src="/EVENT IMG/ring.jpg" alt="Gallery Image 2">
+            </div>
+            <div class="col-md-4">
+                <img src="/EVENT IMG/pic.jpg" alt="Gallery Image 3">
+            </div>
+        </div>
+    </div><br><br>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <!-- <div class="footer-text"></div> -->
+        <p class="text-dark">YOUR PERFECT <br> <strong>WEDDING</strong> <br> WILL COME TRUE</p>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

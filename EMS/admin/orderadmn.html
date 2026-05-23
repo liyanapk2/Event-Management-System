@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+ body {
+            font-family: Arial, sans-serif;
+        }
+
+      /* Header */
+        
+
+      .navbar-brand {
+            font-family: 'Georgia', serif;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+      .btn{
+        background-color: #435739;
+      }
+        .navbar {
+          
+            background-color: #435739;
+            color: #fff;
+        }
+        .navbar .navbar-brand {
+            color: #fff;
+        }
+        .dropdown-menu
+    a:hover {
+        background-color: #435739;}
+
+        .booking-details {
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .booking-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #7f8c8d;
+        }
+        .details-box {
+            background-color: #f7f7f7;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">EVENTO</a>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="admindashboard.html">Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="use.html">Users</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Our services
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="admndec.html">Event</a></li>
+                  <li><a class="dropdown-item" href="#">Dining</a></li>
+                  
+                  
+                </ul>
+              </li>            <li class="nav-item"><a class="nav-link" href="bookadmin.html">Booking</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Feedback</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
+
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-user"></i></a></li>         
+        </ul>
+    </nav>
+    
+<!-- Booking Details Section -->
+<div class="container booking-details">
+    <h4 class="booking-title">BOOKING DETAILS</h4>
+    
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Image and Booking Button -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/EVENT IMG/dec1.jpg" class="card-img-top" alt="Event Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Image1</h5>
+                        <p class="card-text">Rs: 25000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="details-box">
+                    <p><strong>Full Name         :</strong> NAJVA</p>
+                    <p><strong>Mobile              :</strong> 8848162747</p>
+                    <p><strong>Email id           :</strong> abc@gmail.com</p>
+                    <p><strong>Event Type         :</strong> Pre wedding</p>
+                    <p><strong>Date from           :</strong> 02/09/2024</p>
+                    <p><strong>Date to           :</strong> 02/09/2024</p>
+                    <p><strong>Event Time        :</strong> Day</p>
+                    <p><strong>No. of people       :</strong> 100</p>
+                    <p><strong>DJ/Music           :</strong> null</p>
+                    <p><strong>Photography         :</strong> null</p>
+                    <p><strong>Chose Package       :</strong> Basic package per head 350</p>
+                    <p><strong>Additional Services :</strong> Custom menu 50</p>
+                    <p><strong>Total Amount        :</strong> 50000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

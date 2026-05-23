@@ -1,0 +1,56 @@
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .feedback-card {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: #e0ebf7;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .star-rating {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .star-rating i {
+            font-size: 1.5rem;
+            color: #ccc;
+            cursor: pointer;
+            margin: 0 3px;
+        }
+        .star-rating i:hover, .star-rating i:hover ~ i {
+            color: #ffc107;
+        }
+    </style>
+</head>
+<body>
+    <div class="feedback-card text-center">
+        <h4>We appreciate your feedback.</h4>
+        <p>We are always looking for ways to improve your experience. Please take a moment to evaluate and tell us what you think.</p>
+        <div class="star-rating">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+        </div>
+        <form>
+            <div class="mb-3">
+                <textarea class="form-control" rows="3" placeholder="What can we do to improve your experience?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Submit My Feedback</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

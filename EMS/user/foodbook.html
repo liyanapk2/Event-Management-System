@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evento</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #d1d5c3;
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header */
+        .navbar {
+            background-color: #435739;
+            padding: 1rem;
+        }
+
+        .navbar-brand {
+            font-family: 'Georgia', serif;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+         /* Hero Section */
+         .hero-image {
+            background-image: url('/EVENT IMG/fooddec.jpg'); /* Replace with the actual image path */
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .hero-overlay{
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2rem;
+            font-family: 'Courier New', monospace;
+        }
+        .pricing-section {
+            background-color: #e6e7d3;
+            padding: 40px 20px;
+        }
+        .package-card {
+            background-color: #f2f2f2;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .package-card h3 {
+            font-family: 'Georgia', serif;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .price-tag {
+            background-color: #ccc;
+            font-size: 1rem;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .additional-services {
+            background-color: #78866b;
+            color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .form-section {
+            padding: 20px;
+            background-color: #d1d5c3;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .form-section h4 {
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            font-size: 0.9rem;
+        }
+        .image-column img {
+            width: 80%;
+            height: 20%;
+            background-size: cover;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+        ul {
+            padding-left: 20px;
+            list-style-type: disc;
+            text-align: left;
+        }
+        .book-btn {
+            background-color: #1d3c1e;
+            border: none; 
+            color: rgb(255, 255, 255);
+        }
+        .footer {
+            background-color: #435739;
+            color: white;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+   
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">EVENTO</a>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">   <i class="fa-solid fa-user"></i></a></li>         
+
+        </ul>
+    </nav>
+
+     <!-- Hero Section -->
+     <div class="hero-image">
+        <div class="hero-overlay"></div>
+       <div class="hero-text">
+          <div class="calligraphy-text">Evento</div><br>  <div class="slogan-text">YOUR WEDDING,<br>YOUR WAY!</div>
+       </div>
+   </div>
+    <!-- Pricing Section -->
+    <div class="pricing-section text-center">
+        <h2 class="mb-4">CATERING PRICELIST</h2>
+        
+        <div class="row justify-content-center">
+            <!-- Image Column -->
+            <div class="col-md-3 image-column">
+                <img src="/EVENT IMG/food4.jpg" alt="Wedding Image 1">
+                <img src="/EVENT IMG/food1.jpg" alt="Wedding Image 2">
+                <img src="/EVENT IMG/food2.jpg" alt="Wedding Image 3">
+            </div>
+            
+            <!-- Pricing Packages Column -->
+            <div class="col-md-4">
+                <div class="package-card">
+                    <h3>BASIC PACKAGE <span class="price-tag">Rs 350 Per Person</span></h3>
+                    <ul>
+                        <li>Appetizers</li>
+                        <li>Main Course: </li>
+                            <ul>
+                                <li>Breakfast Casserole</li>
+                                <li>Creamy Pesto Chicken</li>
+                            </ul>
+                        <li>Dessert</li>
+                        <li>Non-Alcoholic Beverages</li>
+                    </ul>
+                </div>
+                <div class="package-card">
+                    <h3>STANDARD PACKAGE <span class="price-tag">Rs 550 Per Person</span></h3>
+                    <ul>
+                        <li>Appetizers</li>
+                        <li>Main Course:</li> 
+                        <ul>
+                            <li>Zucchini Roll-Ups </li>
+                            <li>Stuffed Cherry Peppers</li>
+                            <li>Fried Ravioli</li>
+                        </ul>
+                        <li>Dessert</li>
+                        <li>Non-Alcoholic Beverages</li>
+                        <li>Coffee and Tea Service</li>
+                    </ul>
+                </div>
+                <div class="package-card">
+                    <h3>PREMIUM PACKAGE <span class="price-tag">Rs 750 Per Person</span></h3>
+                    <ul>
+                        <li>Appetizers</li>
+                        <li>Main Course:</li> 
+                        <ul>
+                            <li>Mini manchego tart</li>
+                            <li>Ouzi lamb</li>
+                            <li>Pistachio Crusted lamb</li>
+                        </ul>
+                        <li>Non-Alcoholic Beverages</li>
+                        <li>Coffee and Tea Service</li>
+                        <li>Cocktail Hour with Hors d’oeuvres</li>
+                    </ul>
+                </div>
+                
+                    <div class="additional-services">
+                        <h4>Additional Services</h4>
+                        <p>Speciality Desserts - Rs 300</p>
+                        <p>Bartending Services - Rs 200</p>
+                        <p>Custom Menu - Rs 50</p>
+                    </div>
+               
+            </div>
+           
+        </div>
+    </div>
+
+    <!-- Form Section -->
+    <div class="container form-section">
+        <h4>Fill the Form</h4>
+        <form>
+            <div class="form-group">
+                <label for="package">Choose the package</label>
+                <select id="package" class="form-control">
+                    <option>Basic package per head 350</option>
+                    <option>Standard package per head 550</option>
+                    <option>Premium package per head 750</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Do you want additional services?</label>
+                <div>
+                    <input type="radio" id="yes" name="additional" value="yes">
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="no" name="additional" value="no" class="ml-3">
+                    <label for="no">No</label>
+                </div>
+            </div>
+            <button type="submit" class="btn book-btn">Book</button>
+        </form>
+    </div>
+
+    <!-- Footer with Contact Info -->
+    <div class="footer text-center">
+        <div class="contact-info">
+            <p><i class="fas fa-globe"></i> www.eventowedding.com</p>
+            <p><i class="fas fa-envelope"></i> eventowedding@gmail.com</p>
+            <p><i class="fas fa-phone"></i> 217-814-0470</p>
+        </div>
+    </div>
+
+    <!-- JS & Font Awesome for Icons -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

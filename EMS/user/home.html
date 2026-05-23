@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header */
+        .navbar {
+            background-color: #435739;
+            padding: 1rem;
+        }
+
+        .navbar-brand {
+            font-family: 'Georgia', serif;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+         /* User info dropdown */
+         .user-icon {
+            color: rgb(3, 3, 3);
+            font-size: 1.5rem;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .sub-menu-wrap {
+            display: none; /* Hidden by default */
+            position: absolute;
+            top: 100%;
+            right: 10px;
+            width: 200px;
+            background-color: #fff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            padding: 10px;
+            z-index: 1000;
+        }
+
+        .sub-menu-wrap.active {
+            display: block; /* Display when active */
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #333;
+        }
+
+        .user-info i {
+            width: 40px;
+            margin-right: 15px;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #435739;
+        }
+        .user-info h4{
+            font-weight: 50;
+        }
+        .sub-menu hr{
+            border: 0;
+            height: 1px;
+            width: 100%;
+            background: #ccc;
+            margin: 10px 0 10px;
+        }
+
+        .sub-menu-link{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #525252;
+            margin: 12px 0;
+        }
+
+        .sub-menu-link p{
+            width: 100%;
+        }
+
+        .sub-menu-link i{
+            width: 40px;
+            background: #e5e5e5;
+            padding: 8px;
+            margin-right: 15px;
+        }
+
+        .sub-menu-link span{
+            font-size: 22px;
+            transition: transform o.5s;
+        }
+        .sub-menu-link:hover span{
+            transform: translateX(5px);
+        }
+        .sub-menu-link:hover p{
+            font-weight: 600;
+        }
+
+       
+         /* Hero Section */
+         .hero-image {
+            background-image: url('/EVENT IMG/home1.jpg'); /* Replace with the actual image path */
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .hero-overlay{
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2rem;
+            font-family: 'Courier New', monospace;
+        }
+
+
+        /* About Section */
+        .about-section {
+            text-align: center;
+            margin: 2rem 0;
+            font-style: italic;
+        }
+
+        /* Wedding Image Gallery */
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Love Stories */
+        .love-stories, .services-section {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .love-stories h3, .services-section h3 {
+            font-family: 'Georgia', serif;
+        }
+
+        /* services */
+        .card {
+           width: 13rem;
+           height: 20rem;
+           border-radius: 1rem;
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;          
+            border-radius: 1rem;
+
+
+        }
+        .love-stories img{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .price {
+            font-size: 18px;
+            color: #0a0a0a;
+            margin-top: 0rem;
+            text-align: left;
+        }
+        .card-title{
+            margin-top: -1rem;
+            text-align: left;
+
+        }
+        .book-btn {
+            background-color: #1d3c1e;
+            border: none; 
+            color: rgb(255, 255, 255);
+            margin-top: -1rem;
+            margin-left: 7rem;
+            
+        }
+      
+
+       
+        .footer {
+            background-color: #435739;
+            color: white;
+            padding: 20px 0;
+        }
+        .footer h5 {
+            font-weight: bold;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="/admin/admindashboard.html">EVENTO</a>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+         <!-- User icon with dropdown -->
+         <li class="nav-item">
+            <div class="user-icon" onclick="toggleUserMenu()">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="sub-menu-wrap" id="userMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <i class="fa-solid fa-user"></i>
+                        <h4>James</h4>
+                    </div>
+                    <hr>
+
+                    <a href="#" class="sub-menu-link">
+                        <i class="fa-solid fa-user"></i>
+                        <p>Edit Profile</p>
+                        <span>></span>
+                    </a>
+                    <a href="order.html" class="sub-menu-link">
+                        <i class="fa fa-book"></i>
+                        <p>Booking details</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <i class=" fa fa-sign-out"></i>
+                        <p>Logout</p>
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
+        </li>
+        </ul>
+    </nav>
+
+     <!-- Hero Section -->
+     <div class="hero-image">
+        <div class="hero-overlay"></div>
+       <div class="hero-text">
+          <div class="calligraphy-text">Evento</div><br>  <div class="slogan-text">YOUR WEDDING,<br>YOUR WAY!</div>
+       </div>
+   </div>
+
+    <!-- quote -->
+    <section class="about-section">
+        <p>Hand in hand and side by side,<br> we run through life together,<br> sharing moments and making memories<br> that will live on forever...</p>
+    </section>
+
+    <!-- Wedding Gallery -->
+    <section class="container image-gallery">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="/EVENT IMG/pic1.jpg" alt="Wedding Image 1" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <img src="/EVENT IMG/ring.jpg" alt="Wedding Image 2" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <img src="/EVENT IMG/pic.jpg" alt="Wedding Image 3" class="img-fluid">
+            </div>
+        </div>
+    </section>
+
+    <!-- Love Stories Section -->
+    <section class="love-stories">
+        <h3>Love Stories</h3>
+        <div class="row">
+            <div class="col-md">
+                <img src="/EVENT IMG/pic1.jpg" alt="Love Story 1" class="img-fluid">
+            </div>
+            <div class="col-md">
+                <img src="/EVENT IMG/pic1.jpg" alt="Love Story 2" class="img-fluid">
+               
+            </div>
+            <div class="col-md">
+                <img src="/EVENT IMG/nt.jpg" alt="Love Story 3" class="img-fluid">
+            </div>
+            <div class="col-md">
+                <img src="/EVENT IMG/last.jpg" alt="Love Story 4" class="img-fluid">
+            </div>
+            <div class="col-md">
+                <br><br><br><br><br><br><button class="watch-more-btn">WATCH MORE</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="container services-section">
+        <h3>Our Services</h3>
+        <div class="row">
+            <div class="col-md">
+                <div class="card">
+                    <img src="/EVENT IMG/dec6.jpg" class="card-img-top" alt="Image1">
+                         <div class="card-body">
+                            <h5 class="card-title">Image1</h5>
+                             <p class="price">Rs: 25000</p>
+                            <a href="bookdec.html" class="btn book-btn">Book</a>
+                        </div>
+                </div> 
+           </div>
+           <div class="col-md">
+            <div class="card">
+                <img src="/EVENT IMG/dec7.jpg" class="card-img-top" alt="Image1">
+                     <div class="card-body">
+                        <h5 class="card-title">Image1</h5>
+                         <p class="price">Rs: 25000</p>
+                        <a href="bookdec.html" class="btn book-btn">Book</a>
+                    </div>
+            </div> 
+       </div>
+       <div class="col-md">
+        <div class="card">
+            <img src="/EVENT IMG/dec8.jpg" class="card-img-top" alt="Image1">
+                 <div class="card-body">
+                    <h5 class="card-title">Image1</h5>
+                     <p class="price">Rs: 25000</p>
+                    <a href="bookdec.html" class="btn book-btn">Book</a>
+                </div>
+        </div> 
+   </div>
+   <div class="col-md">
+    <div class="card">
+        <img src="/EVENT IMG/dec9.jpg" class="card-img-top" alt="Image1">
+             <div class="card-body">
+                <h5 class="card-title">Image1</h5>
+                 <p class="price">Rs: 25000</p>
+                <a href="bookdec.html" class="btn book-btn">Book</a>
+            </div>
+    </div> 
+</div>
+<div class="col-md">
+    <br><br><br><br><a href="services.html" class="btn book-btn">MORE</a>
+
+</div>
+ </div>
+        
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Love story</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Follow us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+                        <li><a href="#"><i class="fa-brands fa-pinterest"></i></i> Pinterest</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#"><i class="fas fa-phone"></i> 213 567 345</a></li>
+                        <li><a href="#"><i class="fa-solid fa-envelope"></i> evento@gmail.com</a></li>
+                        <li><a href="#"><i class="fa-solid fa-globe"></i> www.evento.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+      <!-- Scripts -->
+      <script>
+        // Function to toggle the display of the user info dropdown
+        function toggleUserMenu() {
+            const userMenu = document.getElementById("userMenu");
+            userMenu.classList.toggle("active");
+        }
+
+        // Close the user menu if clicked outside
+        document.addEventListener("click", function(event) {
+            const userMenu = document.getElementById("userMenu");
+            const userIcon = document.querySelector(".user-icon");
+            if (!userIcon.contains(event.target) && !userMenu.contains(event.target)) {
+                userMenu.classList.remove("active");
+            }
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
